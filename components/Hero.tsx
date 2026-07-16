@@ -24,7 +24,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.4, ease: "easeOut" }}
-        className="invite-frame relative z-10 flex w-full max-w-3xl flex-col items-center px-8 py-14 sm:px-16 sm:py-20"
+        className="invite-frame relative z-10 flex w-full max-w-3xl flex-col items-center px-5 py-14 sm:px-16 sm:py-20"
       >
         <Reveal delay={0.15}>
           <p className="tracked-label text-center text-[11px] text-taupe sm:text-xs">
@@ -52,9 +52,9 @@ export function Hero() {
         </Reveal>
 
         <Reveal delay={0.45} className="mt-10 w-full text-center">
-          <h1 className="font-display text-balance text-5xl font-light leading-[1.1] text-espresso sm:text-7xl">
+          <h1 className="font-display text-balance text-4xl font-light leading-[1.15] text-espresso sm:text-7xl">
             Максим
-            <span className="mx-3 italic text-bronze sm:mx-5">&amp;</span>
+            <span className="mx-2 italic text-bronze sm:mx-5">&amp;</span>
             Александра
           </h1>
         </Reveal>
