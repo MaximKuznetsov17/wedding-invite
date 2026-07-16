@@ -14,7 +14,7 @@ const LOCATIONS = [
     label: "Банкет",
     name: "Ресторан Percorso",
     address: "Санкт-Петербург, Вознесенский проспект, 1",
-    time: "16:00",
+    time: "17:00",
     lat: 59.9352,
     lon: 30.3075,
   },
