@@ -4,9 +4,16 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Reveal } from "./Reveal";
 
 const COUPLE_PHOTO_SRC: string | null = "/couple.jpeg"; // place an image path here, e.g. "/couple.jpg" — layout stays premium either way
+function formatGuestGreeting(names: string[]): string {
+  if (names.length === 1) return names[0];
+  if (names.length === 2) return `${names[0]} и ${names[1]}`;
+  // graceful fallback if more than two ever get passed in
+  return `${names.slice(0, -1).join(", ")} и ${names[names.length - 1]}`;
+}
 
-export function Hero() {
+export function Hero({ guestNames = [] }: { guestNames?: string[] }) {
   const shouldReduceMotion = useReducedMotion();
+  const hasGuestNames = guestNames.length > 0;
 
   return (
     <section className="relative flex min-h-[100svh] w-full flex-col items-center justify-center overflow-hidden px-6 py-24 sm:px-10">
@@ -26,11 +33,25 @@ export function Hero() {
         transition={{ duration: 1.4, ease: "easeOut" }}
         className="invite-frame relative z-10 flex w-full max-w-3xl flex-col items-center px-5 py-14 sm:px-16 sm:py-20"
       >
-        <Reveal delay={0.15}>
+        {hasGuestNames && (
+          <Reveal delay={0.05} className="mb-5">
+            <p className="text-balance text-center font-display text-xl italic text-espresso sm:text-2xl">
+              Дорогие {formatGuestGreeting(guestNames)}
+            </p>
+          </Reveal>
+        )}
+
+        {!hasGuestNames && (<Reveal delay={0.15}>
           <p className="tracked-label text-center text-[11px] text-taupe sm:text-xs">
             Приглашение на свадьбу
           </p>
-        </Reveal>
+        </Reveal>)}
+
+        {hasGuestNames && (<Reveal delay={0.15}>
+          <p className="tracked-label text-center text-[11px] text-taupe sm:text-xs">
+            Приглашаем на свадьбу
+          </p>
+        </Reveal>)}
 
         {/* Portrait plate — holds a real photograph when supplied, otherwise
             a quiet engraved monogram keeps the hero premium without one. */}
