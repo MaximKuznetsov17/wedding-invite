@@ -36,7 +36,7 @@ export function Hero({ guestNames = [] }: { guestNames?: string[] }) {
         {hasGuestNames && (
           <Reveal delay={0.05} className="mb-5">
             <p className="text-balance text-center font-display text-xl italic text-espresso sm:text-2xl">
-              Дорогие {formatGuestGreeting(guestNames)}
+              {formatGuestGreeting(guestNames)}
             </p>
           </Reveal>
         )}
