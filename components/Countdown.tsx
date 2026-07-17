@@ -5,7 +5,7 @@ import { Reveal } from "./Reveal";
 import { Divider } from "./Divider";
 
 // 15 August 2026, 13:00 Moscow time (UTC+3)
-const WEDDING_DATE = new Date("2026-08-15T11:00:00+03:00");
+const WEDDING_DATE = new Date("2026-08-15T10:30:00+03:00");
 
 type TimeLeft = {
   days: number;

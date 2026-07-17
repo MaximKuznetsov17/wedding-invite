@@ -69,8 +69,7 @@ export function Hero() {
 
         <Reveal delay={0.75} className="mt-10 max-w-md">
           <p className="text-center font-body text-base italic leading-relaxed text-cocoa sm:text-lg">
-            Просим оказать нам честь и разделить день, в который два пути
-            станут одним.
+            г. Санкт-Петербург
           </p>
         </Reveal>
       </motion.div>
