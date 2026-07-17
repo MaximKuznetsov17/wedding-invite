@@ -74,9 +74,9 @@ export function Hero({ guestNames = [] }: { guestNames?: string[] }) {
 
         <Reveal delay={0.45} className="mt-10 w-full text-center">
           <h1 className="font-display flex flex-col items-center gap-2 text-5xl font-light leading-[1.1] text-espresso sm:flex-row sm:gap-0 sm:text-7xl">
-            <span>Максим</span>
+            <span>Максима</span>
             <span className="italic text-bronze sm:mx-5">&amp;</span>
-            <span>Александра</span>
+            <span>Александры</span>
           </h1>
         </Reveal>
 
