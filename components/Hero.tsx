@@ -52,10 +52,10 @@ export function Hero() {
         </Reveal>
 
         <Reveal delay={0.45} className="mt-10 w-full text-center">
-          <h1 className="font-display text-balance text-4xl font-light leading-[1.15] text-espresso sm:text-7xl">
-            Максим
-            <span className="mx-2 italic text-bronze sm:mx-5">&amp;</span>
-            Александра
+          <h1 className="font-display flex flex-col items-center gap-2 text-5xl font-light leading-[1.1] text-espresso sm:flex-row sm:gap-0 sm:text-7xl">
+            <span>Максим</span>
+            <span className="italic text-bronze sm:mx-5">&amp;</span>
+            <span>Александра</span>
           </h1>
         </Reveal>
 
